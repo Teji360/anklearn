@@ -1,13 +1,6 @@
 'use client'
-import { Button } from "@/components/ui/button";
-
-"D A I L I E S"
-"Will generate 7 questions daily for you to practice a language of your choice"
-
-
-import LanguageSelection from "./components/LanguageSelection";
 import { useState } from "react";
-
+import { useLanguage } from "../context/LanguageContext";
 export default function Home() {
 
   const [language, setLanguage] = useState("en");
@@ -15,9 +8,8 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] 
     justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      Learn a language practice daily with Dailies
-
-      <LanguageSelection />
+            <h1 className="text-xl font-bold">Select a language</h1>
+      
     </div>
   );
 }
