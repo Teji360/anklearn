@@ -12,7 +12,7 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-    const [targetLanguage, setTargetLanguage] = useState<string>('en');
+    const [targetLanguage, setTargetLanguage] = useState<string>('us');
     const [nativeLanguage, setNativeLanguage] = useState<string>('fr');
 
     return (
@@ -32,6 +32,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 //Function to use the Langauge Context in components
 export function useLanguage() {
     const context = useContext(LanguageContext);
+    console.log('useLanguage context:', context); //for debugging purposes
     if (!context) throw new Error('use language must be used within language provider');
     return context;
 }

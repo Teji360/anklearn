@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+git config --global user.email "TejiriD.Aror@gmail.com"
+git config --global user.name "David Aror"
